@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diseña tu Robot</title>
+
+<style>
+:root{
+    --color1:#00f7ff;
+    --color2:#ff00d4;
+    --fondo:#0b1020;
+    --panel:#141b33;
+    --texto:#f5f7ff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background: linear-gradient(135deg,#050814,#0d1735,#081020);
+    color:var(--texto);
+    min-height:100vh;
+}
+
+/* CABECERA */
+header{
+    text-align:center;
+    padding:30px 20px;
+    border-bottom:2px solid rgba(0,247,255,.3);
+    box-shadow:0 0 20px rgba(0,247,255,.2);
+}
+
+.logo{
+    font-size:60px;
+    margin-bottom:10px;
+}
+
+header h1{
+    color:var(--color1);
+    text-shadow:0 0 10px var(--color1);
+    font-size:2.5rem;
+}
+
+/* MENÚ */
+nav{
+    background:rgba(20,27,51,.9);
+    backdrop-filter: blur(8px);
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--color2);
+    text-shadow:0 0 10px var(--color2);
+}
+
+/* CONTENIDO */
+main{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.seccion-titulo{
+    text-align:center;
+    color:var(--color1);
+    margin-bottom:30px;
+    text-shadow:0 0 8px var(--color1);
+}
+
+.tarjetas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.tarjeta{
+    background:var(--panel);
+    border:1px solid rgba(0,247,255,.3);
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    transition:.3s;
+    box-shadow:0 0 15px rgba(0,247,255,.15);
+}
+
+.tarjeta:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px rgba(255,0,212,.35);
+}
+
+.icono{
+    font-size:70px;
+    margin-bottom:15px;
+}
+
+.tarjeta h3{
+    color:var(--color2);
+    margin-bottom:10px;
+}
+
+.tarjeta p{
+    line-height:1.6;
+    margin-bottom:18px;
+}
+
+.boton{
+    display:inline-block;
+    background:linear-gradient(45deg,var(--color1),var(--color2));
+    color:white;
+    text-decoration:none;
+    padding:10px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.boton:hover{
+    transform:scale(1.05);
+}
+
+.info{
+    margin-top:50px;
+    background:rgba(20,27,51,.8);
+    padding:25px;
+    border-radius:18px;
+    border:1px solid rgba(255,0,212,.3);
+}
+
+.info h2{
+    color:var(--color1);
+    margin-bottom:15px;
+}
+
+.info ul{
+    padding-left:20px;
+    line-height:2;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+    border-top:2px solid rgba(255,0,212,.3);
+    color:#d6d6d6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🤖</div>
+    <h1>Diseña Tu Robot</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#caracteristicas">Características</a></li>
+        <li><a href="#ficha">Ficha Técnica</a></li>
+        <li><a href="#aplicaciones">Aplicaciones</a></li>
+    </ul>
+</nav>
+
+<main>
+
+    <section id="caracteristicas">
+        <h2 class="seccion-titulo">Características del Robot</h2>
+
+        <div class="tarjetas">
+
+            <div class="tarjeta">
+                <div class="icono">🤖</div>
+                <h3>Nombre: NeoBot X</h3>
+                <p>
+                    Robot multifunción diseñado para ayudar a las personas
+                    en tareas domésticas y educativas.
+                </p>
+                <a href="#" class="boton">Ver más</a>
+            </div>
+
+            <div class="tarjeta">
+                <div class="icono">⚡</div>
+                <h3>Tipo de Energía</h3>
+                <p>
+                    Funciona mediante energía solar y una batería de alta
+                    capacidad para trabajar durante todo el día.
+                </p>
+                <a href="#" class="boton">Ver más</a>
+            </div>
+
+            <div class="tarjeta">
+                <div class="icono">🧠</div>
+                <h3>Nivel de IA</h3>
+                <p>
+                    Inteligencia Artificial avanzada capaz de aprender hábitos,
+                    reconocer voz y tomar decisiones sencillas.
+                </p>
+                <a href="#" class="boton">Ver más</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="ficha" class="info">
+        <h2>📋 Ficha Técnica</h2>
+        <ul>
+            <li><strong>Nombre:</strong> NeoBot X</li>
+            <li><strong>Función principal:</strong> Asistente personal y educativo.</li>
+            <li><strong>Altura:</strong> 1,60 m.</li>
+            <li><strong>Peso:</strong> 65 kg.</li>
+            <li><strong>Fuente de energía:</strong> Paneles solares + batería inteligente.</li>
+            <li><strong>Nivel de IA:</strong> 9/10.</li>
+            <li><strong>Conectividad:</strong> WiFi, Bluetooth y sensores inteligentes.</li>
+        </ul>
+    </section>
+
+    <section id="aplicaciones">
+        <h2 class="seccion-titulo" style="margin-top:50px;">
+            Aplicaciones del Robot
+        </h2>
+
+        <div class="tarjetas">
+
+            <div class="tarjeta">
+                <div class="icono">🏠</div>
+                <h3>Hogar Inteligente</h3>
+                <p>
+                    Ayuda en la limpieza, organización y control de dispositivos
+                    domésticos.
+                </p>
+                <a href="#" class="boton">Ver más</a>
+            </div>
+
+            <div class="tarjeta">
+                <div class="icono">🎓</div>
+                <h3>Educación</h3>
+                <p>
+                    Explica materias, resuelve dudas y crea actividades
+                    personalizadas para estudiantes.
+                </p>
+                <a href="#" class="boton">Ver más</a>
+            </div>
+
+            <div class="tarjeta">
+                <div class="icono">🏥</div>
+                <h3>Asistencia</h3>
+                <p>
+                    Puede acompañar a personas mayores, recordar medicinas y
+                    realizar llamadas de emergencia.
+                </p>
+                <a href="#" class="boton">Ver más</a>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    Juan Antonio Sola Cantalejo — 2º ESO
+</footer>
+
+</body>
+</html>
