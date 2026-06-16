@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diseña tu Robot - NeoBot X</title>
+
+<style>
+:root{
+    --color1:#00f7ff;
+    --color2:#ff00d4;
+    --fondo:#0b1020;
+    --panel:#141b33;
+    --texto:#f5f7ff;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#050814,#0d1735,#081020);
+    color:var(--texto);
+}
+
+header{
+    text-align:center;
+    padding:30px 20px;
+    border-bottom:2px solid rgba(0,247,255,.3);
+}
+
+.logo{font-size:70px;}
+header h1{
+    color:var(--color1);
+    text-shadow:0 0 15px var(--color1);
+}
+
+nav{
+    position:sticky;
+    top:0;
+    background:rgba(20,27,51,.95);
+    z-index:100;
+}
+
+nav ul{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    list-style:none;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+main{
+    max-width:1300px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.seccion-titulo{
+    text-align:center;
+    color:var(--color1);
+    margin-bottom:30px;
+}
+
+.tarjetas{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.tarjeta{
+    background:var(--panel);
+    border-radius:18px;
+    padding:20px;
+    border:1px solid rgba(0,247,255,.3);
+    transition:.4s;
+}
+
+.tarjeta:hover{
+    transform:translateY(-8px);
+}
+
+.imagen-tarjeta{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+    margin-bottom:15px;
+}
+
+.icono{
+    font-size:60px;
+    text-align:center;
+}
+
+.tarjeta h3{
+    color:var(--color2);
+    margin:15px 0;
+}
+
+.tarjeta p{
+    line-height:1.7;
+}
+
+.boton{
+    margin-top:15px;
+    border:none;
+    padding:12px 20px;
+    border-radius:30px;
+    background:linear-gradient(45deg,var(--color1),var(--color2));
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.detalles{
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .8s ease;
+    margin-top:15px;
+}
+
+.detalles.mostrar{
+    max-height:1500px;
+}
+
+.detalles p{
+    margin-bottom:12px;
+}
+
+.info{
+    margin-top:50px;
+    background:rgba(20,27,51,.85);
+    padding:25px;
+    border-radius:18px;
+}
+
+.info ul{
+    padding-left:20px;
+    line-height:2;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">🤖</div>
+<h1>Diseña Tu Robot - NeoBot X</h1>
+</header>
+
+<nav>
+<ul>
+<li><a href="#caracteristicas">Características</a></li>
+<li><a href="#ficha">Ficha Técnica</a></li>
+<li><a href="#aplicaciones">Aplicaciones</a></li>
+</ul>
+</nav>
+
+<main>
+
+<section id="caracteristicas">
+<h2 class="seccion-titulo">Características del Robot</h2>
+
+<div class="tarjetas">
+
+<div class="tarjeta">
+<img class="imagen-tarjeta" src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1200&q=80">
+<div class="icono">🤖</div>
+<h3>Nombre: NeoBot X</h3>
+<p>Robot multifunción diseñado para ayudar a las personas en tareas domésticas y educativas.</p>
+<button class="boton" onclick="toggleInfo(this)">Ver más</button>
+<div class="detalles">
+<p>NeoBot X es un robot inteligente de última generación creado para facilitar la vida diaria.</p>
+<p>Integra sensores avanzados capaces de analizar su entorno en tiempo real.</p>
+<p>Puede desplazarse de forma autónoma evitando obstáculos y reconociendo espacios.</p>
+<p>Cuenta con reconocimiento facial para identificar usuarios autorizados.</p>
+<p>Es capaz de mantener conversaciones mediante inteligencia artificial avanzada.</p>
+<p>Su diseño está pensado para trabajar en hogares, centros educativos y espacios tecnológicos.</p>
+<p>Puede aprender nuevas rutinas y adaptarse a diferentes necesidades.</p>
+<p>Su misión es mejorar la productividad, la seguridad y el bienestar de las personas.</p>
+</div>
+</div>
+
+<div class="tarjeta">
+<img class="imagen-tarjeta" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1200&q=80">
+<div class="icono">⚡</div>
+<h3>Tipo de Energía</h3>
+<p>Funciona mediante energía solar y batería inteligente de larga duración.</p>
+<button class="boton" onclick="toggleInfo(this)">Ver más</button>
+<div class="detalles">
+<p>Los paneles solares incorporados permiten captar energía renovable durante el día.</p>
+<p>La batería de litio de alta capacidad proporciona hasta 18 horas de funcionamiento.</p>
+<p>El sistema controla automáticamente el consumo energético.</p>
+<p>Puede entrar en modo ahorro cuando detecta poca actividad.</p>
+<p>Regresa por sí mismo a la estación de carga cuando la batería disminuye.</p>
+<p>Reduce costes energéticos y contribuye al cuidado del medio ambiente.</p>
+<p>La energía se distribuye eficientemente entre motores, sensores y sistemas de IA.</p>
+<p>Su tecnología garantiza un funcionamiento seguro y estable.</p>
+</div>
+</div>
+
+<div class="tarjeta">
+<img class="imagen-tarjeta" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1200&q=80">
+<div class="icono">🧠</div>
+<h3>Nivel de IA</h3>
+<p>Inteligencia Artificial avanzada capaz de aprender hábitos y reconocer voz.</p>
+<button class="boton" onclick="toggleInfo(this)">Ver más</button>
+<div class="detalles">
+<p>Utiliza algoritmos de aprendizaje automático para mejorar continuamente.</p>
+<p>Aprende rutinas y preferencias de cada usuario.</p>
+<p>Comprende órdenes de voz complejas y responde de forma natural.</p>
+<p>Analiza datos en tiempo real para tomar decisiones rápidas.</p>
+<p>Reconoce rostros, objetos y determinadas emociones básicas.</p>
+<p>Personaliza recomendaciones y recordatorios.</p>
+<p>Su sistema puede adaptarse a nuevos entornos sin necesidad de programación constante.</p>
+<p>Representa un nivel muy alto de inteligencia artificial aplicada a la robótica.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="ficha" class="info">
+<h2>📋 Ficha Técnica</h2>
+<ul>
+<li><strong>Nombre:</strong> NeoBot X</li>
+<li><strong>Función principal:</strong> Asistente personal y educativo.</li>
+<li><strong>Altura:</strong> 1,60 m.</li>
+<li><strong>Peso:</strong> 65 kg.</li>
+<li><strong>Fuente de energía:</strong> Solar + batería inteligente.</li>
+<li><strong>Nivel IA:</strong> 9/10.</li>
+<li><strong>Conectividad:</strong> WiFi, Bluetooth y GPS.</li>
+<li><strong>Autonomía:</strong> 18 horas.</li>
+<li><strong>Velocidad máxima:</strong> 12 km/h.</li>
+<li><strong>Visión:</strong> Cámaras 360°.</li>
+<li><strong>Procesador:</strong> Neural Core X9.</li>
+<li><strong>Almacenamiento:</strong> 8 TB.</li>
+</ul>
+</section>
+
+<section id="aplicaciones">
+<h2 class="seccion-titulo" style="margin-top:50px;">Aplicaciones del Robot</h2>
+
+<div class="tarjetas">
+
+<div class="tarjeta">
+<img class="imagen-tarjeta" src="https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&w=1200&q=80">
+<div class="icono">🏠</div>
+<h3>Hogar Inteligente</h3>
+<p>Ayuda en la limpieza, organización y control de dispositivos domésticos.</p>
+<button class="boton" onclick="toggleInfo(this)">Ver más</button>
+<div class="detalles">
+<p>Puede aspirar y supervisar diferentes habitaciones.</p>
+<p>Controla luces, persianas y sistemas de climatización.</p>
+<p>Detecta humo, fugas de agua o incidencias domésticas.</p>
+<p>Automatiza tareas rutinarias del hogar.</p>
+<p>Ayuda a mantener la vivienda más segura y eficiente.</p>
+<p>Gestiona dispositivos conectados mediante domótica.</p>
+<p>Reduce tiempo dedicado a tareas repetitivas.</p>
+<p>Mejora la comodidad diaria de toda la familia.</p>
+</div>
+</div>
+
+<div class="tarjeta">
+<img class="imagen-tarjeta" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1200&q=80">
+<div class="icono">🎓</div>
+<h3>Educación</h3>
+<p>Explica materias, resuelve dudas y crea actividades personalizadas.</p>
+<button class="boton" onclick="toggleInfo(this)">Ver más</button>
+<div class="detalles">
+<p>Funciona como tutor inteligente para estudiantes.</p>
+<p>Explica matemáticas, ciencias, idiomas y tecnología.</p>
+<p>Genera ejercicios adaptados al nivel académico.</p>
+<p>Ayuda a preparar exámenes y trabajos escolares.</p>
+<p>Utiliza ejemplos visuales para facilitar el aprendizaje.</p>
+<p>Evalúa progresos y propone mejoras.</p>
+<p>Fomenta la curiosidad y el pensamiento crítico.</p>
+<p>Convierte el estudio en una experiencia más interactiva.</p>
+</div>
+</div>
+
+<div class="tarjeta">
+<img class="imagen-tarjeta" src="https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=1200&q=80">
+<div class="icono">🏥</div>
+<h3>Asistencia</h3>
+<p>Puede acompañar a personas mayores y recordar medicinas.</p>
+<button class="boton" onclick="toggleInfo(this)">Ver más</button>
+<div class="detalles">
+<p>Recuerda horarios de medicación y citas médicas.</p>
+<p>Realiza llamadas automáticas en situaciones de emergencia.</p>
+<p>Ofrece compañía mediante conversación y entretenimiento.</p>
+<p>Ayuda a reducir la sensación de soledad.</p>
+<p>Supervisa ciertas condiciones básicas del entorno.</p>
+<p>Facilita la comunicación con familiares y cuidadores.</p>
+<p>Incrementa la autonomía de las personas mayores.</p>
+<p>Contribuye a mejorar la calidad de vida y la seguridad.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+</main>
+
+<footer>
+Juan Antonio Sola Cantalejo — 2º ESO
+</footer>
+
+<script>
+function toggleInfo(btn){
+const detalles=btn.nextElementSibling;
+detalles.classList.toggle("mostrar");
+btn.textContent=detalles.classList.contains("mostrar")?"Ver menos":"Ver más";
+}
+</script>
+
+</body>
+</html>
